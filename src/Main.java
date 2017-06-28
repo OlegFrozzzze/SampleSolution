@@ -28,17 +28,15 @@ public class Main {
                     } else {
                         if (a == 5) {
                             Solution.OutputTextToFileHtml();
-
                         } else {
-                            System.out.println("Некорректные данные введите");
+                            if (a == 6) {
+                                Solution.OutputTextToFileHtmlTwo();
+                            } else {
+                                System.out.println("Некорректные данные введите");
+                            }
                         }
                     }
                 }
-                //3 txt document
-
-                //4 txt document
-                //5 html document
-                //6 html document
             }
         }
     }

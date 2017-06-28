@@ -46,7 +46,7 @@ public class Solution {
             ex.printStackTrace();
         }
     }
-
+    //Sequential sum of numbers in txt file
     public static void OutputTextToFileTwo() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test2.txt");
@@ -58,7 +58,7 @@ public class Solution {
             ex.printStackTrace();
         }
     }
-
+    //Sequential sum of numbers in html file
     public static void OutputTextToFileHtml() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test1.html");
@@ -82,6 +82,35 @@ public class Solution {
                 if (a % 2 != 0) {
                     out.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
                 }
+            }
+            out.println(d);
+            out.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+        //Sequential sum of numbers in html file
+    public static void OutputTextToFileHtmlTwo() {
+        try {
+            PrintWriter out = new PrintWriter("B:\\Project\\src\\Test2.html");
+            String b = "<!DOCTYPE html>" + "\n" +
+                    "<html lang=\"ru\">" + "\n" +
+                    "<head>" + "\n" +
+                    "<meta charset=\"UTF-8\">" + "\n" +
+                    "<title>Document</title>" + "\n" +
+                    "</head>" + "\n" +
+                    "<body>" + "\n" +
+                    "<table border=\"1\">";
+            String d = "</table>" + "\n" +
+                    "</body>" + "\n" +
+                    "</html>";
+            String tr = "<tr>";
+            String td = "<td>";
+            String trClose = "</tr>";
+            String tdClose = "</td>";
+            out.println(b);
+            for (int a = 1; a < 26; a++) {
+                    out.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
             }
             out.println(d);
             out.close();
