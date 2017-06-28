@@ -27,18 +27,13 @@ public class Solution {
             System.out.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
         }
     }
-    //3 txt document
-
-    //4 txt document
-    //5 html document
-    //6 html document
 
     public static void showMenu() {
         System.out.println("Выберите 1 из вариантов");
         System.out.println("1) Последовательное попарное сложение чисел от 1 до 26");
         System.out.println("2) Последовательное сложение чисел через один");
     }
-
+    //Sequential pairwise sum of numbers in txt file
     public static void OutputTextToFile() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test.txt");
@@ -86,7 +81,6 @@ public class Solution {
             for (int a = 1; a < 26; a++) {
                 if (a % 2 != 0) {
                     out.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
-                    //<tr > <td > 34, 5 </td > <td > 3, 5 </td > <td > 36 </td > </tr >
                 }
             }
             out.println(d);
