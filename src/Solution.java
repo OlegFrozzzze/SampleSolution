@@ -46,34 +46,48 @@ public class Solution {
                 if (a % 2 != 0)
                     out.println(a + "+" + (a + 1) + "=" + (a + (a + 1)));
             }
-           out.close();
+            out.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-    public static void OutputTextToFileTwo(){
+
+    public static void OutputTextToFileTwo() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test2.txt");
             for (int a = 1; a < 26; a++) {
-                    out.println(a + "+" + (a + 1) + "=" + (a + (a + 1)));
+                out.println(a + "+" + (a + 1) + "=" + (a + (a + 1)));
             }
             out.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-    public static void OutputTextToFileHtml(){
+
+    public static void OutputTextToFileHtml() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test1.html");
-            String b = "<!DOCTYPE html> <html lang=\"ru\"> <head> <meta charset=\"UTF-8\"> <title>Document</title> </head> <body>" ;
-            String d = "</body> </html>";
-            out.print(b);
+            String b = "<!DOCTYPE html>"+"\n"+
+                    "<html lang=\"ru\">"+"\n"+
+                    "<head>"+"\n"+
+                    "<meta charset=\"UTF-8\">"+"\n"+
+                    "<title>Document</title>"+"\n"+
+                    "</head>"+"\n"+
+                    "<body>";
+            String d = "</body>"+"\n"+
+                    "</html>";
+            String tr = "<tr>";
+            String td = "<td>";
+            String trClose = "</tr>";
+            String tdClose = "</td>";
+            out.println(b);
             for (int a = 1; a < 26; a++) {
                 if (a % 2 != 0) {
                     out.println(a + "+" + (a + 1) + "=" + (a + (a + 1)));
+                    //<tr > <td > 34, 5 </td > <td > 3, 5 </td > <td > 36 </td > </tr >
                 }
             }
-            out.print(d);
+            out.println(d);
             out.close();
         } catch (IOException ex) {
             ex.printStackTrace();
