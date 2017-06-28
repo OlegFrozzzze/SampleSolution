@@ -67,14 +67,16 @@ public class Solution {
     public static void OutputTextToFileHtml() {
         try {
             PrintWriter out = new PrintWriter("B:\\Project\\src\\Test1.html");
-            String b = "<!DOCTYPE html>"+"\n"+
-                    "<html lang=\"ru\">"+"\n"+
-                    "<head>"+"\n"+
-                    "<meta charset=\"UTF-8\">"+"\n"+
-                    "<title>Document</title>"+"\n"+
-                    "</head>"+"\n"+
-                    "<body>";
-            String d = "</body>"+"\n"+
+            String b = "<!DOCTYPE html>" + "\n" +
+                    "<html lang=\"ru\">" + "\n" +
+                    "<head>" + "\n" +
+                    "<meta charset=\"UTF-8\">" + "\n" +
+                    "<title>Document</title>" + "\n" +
+                    "</head>" + "\n" +
+                    "<body>" + "\n" +
+                    "<table border=\"1\">";
+            String d = "</table>" + "\n" +
+                    "</body>" + "\n" +
                     "</html>";
             String tr = "<tr>";
             String td = "<td>";
@@ -83,7 +85,7 @@ public class Solution {
             out.println(b);
             for (int a = 1; a < 26; a++) {
                 if (a % 2 != 0) {
-                    out.println(a + "+" + (a + 1) + "=" + (a + (a + 1)));
+                    out.println(tr + td + a + "+" + (a + 1) + tdClose + td + (a + (a + 1)) + tdClose + trClose);
                     //<tr > <td > 34, 5 </td > <td > 3, 5 </td > <td > 36 </td > </tr >
                 }
             }
