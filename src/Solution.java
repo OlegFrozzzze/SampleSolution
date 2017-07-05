@@ -11,14 +11,13 @@ import java.util.Scanner;
 //TODO Придумать нормальное имя для класса
 public class Solution {
     //Sequential pairwise sum of numbers
-    public static int seqPairSumOfNum() {
+    public static void seqPairSumOfNum() {
         for (int i = 1; i < 26; i++) {
             if (i % 2 != 0) {
                 System.out.println(i + "+" + (i + 1) + "=" + (i + (i + 1)));
 
             }
         }
-        return 1;
     }
 
     //Sequential sum of numbers
